@@ -4,7 +4,6 @@
 
 Sandwich = Struct.new(:taste, :toppings)
 
-describe Sandwich do
   describe 'An ideal sandwich' do 
     it 'is delicious' do
       sandwich = Sandwich.new('delicious', []) # create an object sandwich
@@ -20,6 +19,4 @@ describe Sandwich do
 
       expect(toppings).not_to be_empty 
     end 
-
   end
-end
