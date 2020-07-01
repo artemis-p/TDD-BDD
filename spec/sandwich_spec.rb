@@ -2,9 +2,7 @@
 # the it block is an example of the sandwich's use or a test case
 # using the Arrange/Act/Assert pattern - set up an object, do something with it and check that it behaved the way we expected it
 
-# Sandwich = Struct.new(:taste, :toppings)
-
-require 'sandwich'
+Sandwich = Struct.new(:taste, :toppings)
 
 describe Sandwich do
   describe 'An ideal sandwich' do 
@@ -14,5 +12,14 @@ describe Sandwich do
 
       expect(taste).to eq('delicious') # verify that the result is delicious 
     end
+
+    it "let's me add toppings" do
+      sandwich = Sandwich.new('delicious', [])   
+      sandwich.toppings << 'cheese'
+      toppings = sandwich.toppings
+
+      expect(toppings).not_to be_empty 
+    end 
+
   end
 end
