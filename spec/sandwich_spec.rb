@@ -67,23 +67,23 @@
 #   end
 
 
-  # Same example using "let" to avoid repetitive set up =>let initializes data on demand
-  Sandwich = Struct.new(:taste, :toppings)
+  # # Same example using "let" to avoid repetitive set up =>let initializes data on demand
+  # Sandwich = Struct.new(:taste, :toppings)
 
-  describe 'An ideal sandwich' do 
-    let(:sandwich) { Sandwich.new('delicious', []) }
-    it 'is delicious' do
+  # describe 'An ideal sandwich' do 
+  #   let(:sandwich) { Sandwich.new('delicious', []) }
+  #   it 'is delicious' do
 
-      taste = sandwich.taste 
+  #     taste = sandwich.taste 
 
-      expect(taste).to eq('delicious') 
-    end
+  #     expect(taste).to eq('delicious') 
+  #   end
 
-    it "let's me add toppings" do  
-      sandwich.toppings << 'cheese'
-      toppings = sandwich.toppings
+  #   it "let's me add toppings" do  
+  #     sandwich.toppings << 'cheese'
+  #     toppings = sandwich.toppings
 
-      expect(toppings).not_to be_empty 
-    end 
-  end
+  #     expect(toppings).not_to be_empty 
+  #   end 
+  # end
   
