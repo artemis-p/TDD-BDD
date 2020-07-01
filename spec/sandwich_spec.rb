@@ -14,8 +14,8 @@ Sandwich = Struct.new(:taste, :toppings)
 
     it "let's me add toppings" do
       sandwich = Sandwich.new('delicious', [])   
-      sandwich.toppings << 'cheese'
-      toppings = sandwich.toppings
+      sandwich.toppings << 'cheese' # adding toppings
+      toppings = sandwich.toppings #checking toppings
 
       expect(toppings).not_to be_empty 
     end 
@@ -42,6 +42,29 @@ Sandwich = Struct.new(:taste, :toppings)
     end 
   end
 
+
+  # Same example using helper methods to avoid repetitive set up
+  
+  Sandwich = Struct.new(:taste, :toppings)
+
+  describe 'An ideal sandwich' do 
+    def sandwich
+      @sandwich ||= Sandwich.new('delicious', []) # adding memoization => we store the results of an operation and refer to the stored copy from then on(creating a sandwich)
+    end
+
+    it 'is delicious' do
+      taste = sandwich.taste
+
+      expect(taste).to eq('delicious') 
+    end
+
+    it "let's me add toppings" do 
+      sandwich.toppings << 'cheese'
+      toppings = sandwich.toppings
+
+      expect(toppings).not_to be_empty 
+    end 
+  end
 
   
   
