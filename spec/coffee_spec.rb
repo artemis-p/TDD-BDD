@@ -16,12 +16,12 @@ describe "A cup of coffee" do
     before { coffee.add :milk }
 
     it "is light in colour" do # pending spec
-      pending "Colour not implemented yet" 
+      # pending "Colour not implemented yet" 
       expect(coffee.colour).to be(:light)
     end
 
     it "is cooler than 10 degrees Celsius" do # pending spec
-      pending "Temperature not implemented yet"
+      # pending "Temperature not implemented yet"
       expect(coffee.temperature).to be < 10.0
     end
 
