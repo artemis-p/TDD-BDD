@@ -12,9 +12,11 @@ describe "A cup of coffee" do
     expect(coffee.price).to eq(1.00)
   end
 
-  fcontext "with milk" do # if you add f before context means that it's focused context. configure rspec to run only the focused examples by adding line 5 and run rspec. It will run the focused example
+  context "with milk" do # if you add f before context means that it's focused context. configure rspec to run only the focused examples by adding line 5 and run rspec. It will run the focused example
     before { coffee.add :milk }
 
+    it "is light in colour"
+    it "is cooler"
     it "costs £1.25" do
       expect(coffee.price).to eq(1.25)
     end
