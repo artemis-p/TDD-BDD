@@ -11,7 +11,9 @@ describe Tea do
     expect(tea.flavour).to be :earl_grey
   end
 
-  it "is hot" do
-    expect(tea.temperature).to be > 100.0
+  context "Earl grey" do
+    it "is hot" do
+      expect(tea.temperature).to be > 100.0
+    end
   end
 end
